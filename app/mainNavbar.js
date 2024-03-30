@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function MainNavbar() {  
   return (
-<div className="bg-gray-100">
+<div className="bg-gray-100 z-10">
 <Navbar fluid rounded className="bg-gray-100">
     <Navbar.Brand href="https://flowbite-react.com">
       <Image src={logo} className="mr-3 h-4 sm:h-4" alt="Logo" />
