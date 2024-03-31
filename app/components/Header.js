@@ -1,5 +1,6 @@
 
 'use client'
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 function Header(props) {
@@ -8,16 +9,20 @@ function Header(props) {
         setToggle(!toggle)
         props.handleToggleValue(toggle)
     }
+    const [userDetails, setUserDetails] = useState(false)
+    const userInfo = () => {
+        setUserDetails(!userDetails)
+    }
   return (
     <>
     
 <header className="app-header flex items-center px-5 gap-4 border-b-2 ">
 
-<a className='logo-box' href='index.html'>
+{/* <Link className='logo-box' href='index.html'>
     <img src="assets/images/logo-sm.png" className="h-6" alt="Small logo" />
-</a>
+</Link> */}
 
-<button id="button-toggle-menu" onClick={menuToggle} className="nav-link p-2 waves-effect me-auto">
+<button id="button-toggle-menu" onClick={menuToggle} className=" hidden sm:block nav-link p-2 waves-effect me-auto">
     <span className="sr-only">Menu Toggle Button</span>
     <span className="flex items-center justify-center h-6 w-6">
         <i className="ph ph-list text-2xl"></i>
@@ -67,34 +72,34 @@ function Header(props) {
             <i className="ph ph-arrows-out text-2xl"></i>
         </span>
     </button>
-</div>
+</div> */}
 
 <div className="relative">
-    <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" className="nav-link flex items-center gap-2.5 waves-effect p-2">
+    <button data-fc-type="dropdown" data-fc-placement="bottom-end" onClick={userInfo} type="button" className="nav-link flex items-center gap-2.5 waves-effect p-2">
         <img src="assets/images/users/avatar-6.jpg" alt="user-image" className="rounded-full h-8 w-8"/>
         <span className="md:flex items-center hidden">
             <span className="font-medium text-base">Jamie D.</span>
             <i className='ph ph-chevron-down'></i>
         </span>
     </button>
-    <div className="fc-dropdown fc-dropdown-open:opacity-100 hidden opacity-0 w-40 z-50 transition-[margin,opacity] duration-300 mt-2 bg-white shadow-lg border rounded-lg p-2">
-        <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100" href="#">
+    <div className={`fc-dropdown fc-dropdown-open:opacity-100 ${userDetails?'block':'hidden'} absolute  w-32 z-50 transition-[margin,opacity] duration-300 mt-2 bg-[#405189] shadow-lg border rounded-lg p-2`}>
+        {/* <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-100 hover:bg-gray-800" href="#">
             Inbox
         </a>
-        <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100" href="#">
+        <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-100 hover:bg-gray-800" href="#">
             Profile
         </a>
-        <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100" href="#">
+        <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-100 hover:bg-gray-800" href="#">
             Settings
         </a>
-        <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100" href="#">
+        <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-100 hover:bg-gray-800" href="#">
             Lock Account
-        </a>
-        <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100" href="#">
+        </a> */}
+        <Link className="flex items-center py-2 px-3 rounded-md text-sm text-gray-100 hover:bg-gray-800" href="#">
             Log Out
-        </a>
+        </Link>
     </div>
-</div> */}
+</div>
 </header>
         
 </>
