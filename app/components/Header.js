@@ -68,7 +68,7 @@ function Header(props) {
         </span>
     </button>
 </div>
-
+*/}
 <div className="relative">
     <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" className="nav-link flex items-center gap-2.5 waves-effect p-2">
         <img src="assets/images/users/avatar-6.jpg" alt="user-image" className="rounded-full h-8 w-8"/>
@@ -94,7 +94,7 @@ function Header(props) {
             Log Out
         </a>
     </div>
-</div> */}
+</div> 
 </header>
         
 </>

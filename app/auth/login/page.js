@@ -1,8 +1,10 @@
 import React from 'react'
+import LoginForm from '../../components/authentication/login'
 
 function Login() {
   return (
     <>
+    {/**
     <div className='flex justify-center items-center h-screen'>
     <div className="2xl:w-1/4 lg:w-1/3 md:w-1/2 w-full">
         <div className="card overflow-hidden sm:rounded-md rounded-none">
@@ -29,7 +31,8 @@ function Login() {
 
         <p className="text-center mt-8">Create an account ?<a className="font-medium ms-1" href="#">Sign up</a></p>
     </div>
-    </div>
+    </div> */}
+    <LoginForm />
     </>
   )
 }

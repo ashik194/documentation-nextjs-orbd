@@ -1,8 +1,10 @@
 import React from 'react'
+import SignupForm from '../../components/authentication/signup'
 
 function Signup() {
   return (
     <>
+    {/** 
     <div className='flex justify-center items-center h-screen'>
     <div className="2xl:w-1/4 lg:w-1/3 md:w-1/2 w-full">
         <div className="card overflow-hidden sm:rounded-md rounded-none">
@@ -40,7 +42,8 @@ function Signup() {
 
         <p className="text-center mt-8">Already have an account ?<a className="font-medium ms-1" href="auth-login.html">Sign In</a></p>
     </div>
-    </div>
+    </div>*/}
+    <SignupForm />
     </>
   )
 }
