@@ -1,7 +1,8 @@
 export default function LoginForm() {
     return (
         <>
-            <div className="bg-[#F3F3F9] flex justify-center h-full p-4">
+            <div className="bg-[#F3F3F9] min-h-screen">
+            <div className="flex justify-center p-4">
                 <div className="max-w-md rounded-md bg-white flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
 
@@ -81,6 +82,7 @@ export default function LoginForm() {
                         </p>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )
