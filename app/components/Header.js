@@ -1,23 +1,30 @@
-import React from 'react'
 
-function Header() {
+'use client'
+import React, { useState } from 'react'
+
+function Header(props) {
+    const [toggle, setToggle] = useState(false)
+    const menuToggle = () => {
+        setToggle(!toggle)
+        props.handleToggleValue(toggle)
+    }
   return (
     <>
     
-<header className="app-header flex items-center px-5 gap-4">
+<header className="app-header flex items-center px-5 gap-4 border-b-2 ">
 
 <a className='logo-box' href='index.html'>
     <img src="assets/images/logo-sm.png" className="h-6" alt="Small logo" />
 </a>
 
-<button id="button-toggle-menu" className="nav-link p-2 waves-effect me-auto">
+<button id="button-toggle-menu" onClick={menuToggle} className="nav-link p-2 waves-effect me-auto">
     <span className="sr-only">Menu Toggle Button</span>
     <span className="flex items-center justify-center h-6 w-6">
         <i className="ph ph-list text-2xl"></i>
     </span>
 </button>
 
-<div className="md:flex hidden items-center relative">
+{/* <div className="md:flex hidden items-center relative">
     <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <i className="ph ph-magnifying-glass text-base"></i>
     </div>
@@ -87,7 +94,7 @@ function Header() {
             Log Out
         </a>
     </div>
-</div>
+</div> */}
 </header>
         
 </>
