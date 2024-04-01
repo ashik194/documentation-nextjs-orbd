@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import Link from 'next/link'
+import { PiHouseBold } from 'react-icons/pi'
+import { FaListUl } from "react-icons/fa6";
 
 export default function layout({children}) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -27,12 +29,16 @@ export default function layout({children}) {
             <div data-simplebar>
                 <ul className="menu" data-fc-type="accordion">
                     <li className="menu-title">Menu</li>
-
                     <li className="menu-item">
-                        <Link className='menu-link waves-effect' href='/'>
-                            <span className="menu-icon"><i className="ph-duotone ph-house"></i></span>
+                        <Link className='menu-link waves-effect' href='/admin'>
+                            <span className="menu-icon"><PiHouseBold /></span>
                             <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> Dashboard </span>
-                            {/* <span className={`${toggleValue?'hidden':'block'} badge bg-primary rounded ms-auto`}>01</span> */}
+                        </Link>
+                    </li>
+                    <li className="menu-item">
+                        <Link className='menu-link waves-effect' href='/admin'>
+                            <span className="menu-icon"><FaListUl /></span>
+                            <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> List </span>
                         </Link>
                     </li>
 

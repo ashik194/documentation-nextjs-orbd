@@ -2,6 +2,9 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import Link from 'next/link'
+import { PiHouseBold } from "react-icons/pi";
+import { FaPiedPiper } from "react-icons/fa";
+import { FaWpforms } from "react-icons/fa6";
 
 function layout({children}) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -29,24 +32,21 @@ function layout({children}) {
                     <li className="menu-title">Menu</li>
 
                     <li className="menu-item">
-                        <Link className='menu-link waves-effect' href='/'>
-                            <span className="menu-icon"><i className="ph-duotone ph-house"></i></span>
+                        <Link className='menu-link waves-effect' href='/clients'>
+                            <span className="menu-icon"><PiHouseBold /></span>
                             <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> Dashboard </span>
-                            {/* <span className={`${toggleValue?'hidden':'block'} badge bg-primary rounded ms-auto`}>01</span> */}
                         </Link>
                     </li>
                     <li className="menu-item">
                         <Link className='menu-link waves-effect' href='/clients/sso'>
-                            <span className="menu-icon"><i className="ph-duotone ph-house"></i></span>
+                            <span className="menu-icon"><FaWpforms /></span>
                             <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> SSO </span>
-                            {/* <span className={`${toggleValue?'hidden':'block'} badge bg-primary rounded ms-auto`}>01</span> */}
                         </Link>
                     </li>
                     <li className="menu-item">
                         <Link className='menu-link waves-effect' href='/clients/api'>
-                            <span className="menu-icon"><i className="ph-duotone ph-house"></i></span>
+                            <span className="menu-icon"><FaPiedPiper /></span>
                             <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> API </span>
-                            {/* <span className={`${toggleValue?'hidden':'block'} badge bg-primary rounded ms-auto`}>01</span> */}
                         </Link>
                     </li>
 

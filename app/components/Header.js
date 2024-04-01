@@ -2,6 +2,7 @@
 'use client'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 
 function Header(props) {
     const [toggle, setToggle] = useState(false)
@@ -25,7 +26,8 @@ function Header(props) {
 <button id="button-toggle-menu" onClick={menuToggle} className=" hidden sm:block nav-link p-2 waves-effect me-auto">
     <span className="sr-only">Menu Toggle Button</span>
     <span className="flex items-center justify-center h-6 w-6">
-        <i className="ph ph-list text-2xl"></i>
+        {/* <i className="ph ph-list text-2xl"></i> */}
+        <HiMiniBars3BottomLeft className='text-2xl' />
     </span>
 </button>
 
