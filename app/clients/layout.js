@@ -35,6 +35,20 @@ function layout({children}) {
                             {/* <span className={`${toggleValue?'hidden':'block'} badge bg-primary rounded ms-auto`}>01</span> */}
                         </Link>
                     </li>
+                    <li className="menu-item">
+                        <Link className='menu-link waves-effect' href='/clients/sso'>
+                            <span className="menu-icon"><i className="ph-duotone ph-house"></i></span>
+                            <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> SSO </span>
+                            {/* <span className={`${toggleValue?'hidden':'block'} badge bg-primary rounded ms-auto`}>01</span> */}
+                        </Link>
+                    </li>
+                    <li className="menu-item">
+                        <Link className='menu-link waves-effect' href='/clients/api'>
+                            <span className="menu-icon"><i className="ph-duotone ph-house"></i></span>
+                            <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> API </span>
+                            {/* <span className={`${toggleValue?'hidden':'block'} badge bg-primary rounded ms-auto`}>01</span> */}
+                        </Link>
+                    </li>
 
                 </ul>
             </div>
