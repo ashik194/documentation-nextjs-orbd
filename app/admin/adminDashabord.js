@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../components/Button'
+import Switch from '../components/switch'
 
 export default function AdminDashboard() {
   return (
@@ -83,10 +84,18 @@ export default function AdminDashboard() {
                 </span>
               </td>
 
-              <td className="px-2 py-3">
+{/*              <td className="px-2 py-3">
                 <span className="flex sm:flex-col md:flex-row gap-2">
                   <Button className={"bg-[#f3f6f9] text-sm rounded px-2 py-1"} text={"Approved"}/>
                   <Button className={"bg-[#f3f6f9] text-sm rounded px-2 py-1"} text={"Disapproved"}/>
+                </span>
+  </td>*/}
+
+              <td className="px-2 py-3">
+                <span className="flex sm:flex-col md:flex-row gap-2">
+                <Switch 
+                initialStatus={"Approved"}
+                toggleStatus={"Disapproved"} />
                 </span>
               </td>
 
