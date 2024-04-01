@@ -5,7 +5,7 @@ import Switch from '../components/switch'
 export default function AdminDashboard() {
   return (
 
-  <div className='bg-red-400 min-w-screen min-h-screen p-4'>
+  <div className='min-w-screen min-h-screen p-4'>
     <div className="flex flex-col justify-start bg-white rounded w-auto">
       
       <div className="flex flex-row items-center border-[#e9ebec] border-b p-4">
