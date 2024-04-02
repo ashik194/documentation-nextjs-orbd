@@ -3,6 +3,8 @@
 import React, { useState } from 'react'
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { LuRefreshCcw } from "react-icons/lu";
+import rightSideBanner from "@/public/myGovBanner.png"
+import { CgRemove } from "react-icons/cg";
 
 function SSO() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -29,6 +31,11 @@ function SSO() {
     const redirectAdd = () => {
         setRedirectUri([...redirectUri, { redirect_uri: "" }]);
     };
+    const redirectRemove = (index) => {
+        const list = [...redirectUri];
+        list.splice(index, 1);
+        setRedirectUri(list);
+      };
 
   return (
     <>
@@ -36,8 +43,9 @@ function SSO() {
         <h4 className='text-[15px] font-bold uppercase '>Clients</h4>
     </div>
         <div className='mx-10 my-4'>
+            <div className='flex justify-between items-center'>
             <div
-                className="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface shadow-lg shadow-gray-800/30 max-w-3xl">
+                className="flex-1 block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface shadow-lg shadow-gray-800/30 max-w-3xl">
                 <div
                     className="border-b-2 border-neutral-100 px-6 py-3 dark:border-white/10 font-bold text-[16px]">
                     SSO
@@ -93,7 +101,7 @@ function SSO() {
                                     name=""
                                     value={refreshText}
                                     placeholder="Client Secret" readOnly/>
-                                    <button onClick={handleRefreshText} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                                    <button onClick={handleRefreshText} className="flex-shrink-0 bg-[#212529] hover:bg-[#424649] border-[#212529] hover:border-[#373b3e] text-sm border-4 text-white py-1 px-2 rounded" type="button">
                                     {/* Refresh */}
                                     <LuRefreshCcw className='text-2xl' />
                                     </button>
@@ -161,10 +169,16 @@ function SSO() {
                                     name=""
                                     value=""
                                     placeholder="Redirect URI"/>
-                                    {redirectUri.length - 1 === index && redirectUri.length < 3 && (
-                                        <button onClick={redirectAdd} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                                    {redirectUri.length - 1 !== index && redirectUri.length > 0 && (
+                                        <button onClick={redirectRemove} className="flex-shrink-0 bg-[#f06548] hover:bg-[#cc563d] border-[#f06548] hover:border-[#cc563d] text-sm border-4 text-white py-1 px-2 rounded" type="button">
                                         {/* Add More */}
-                                        <IoMdAddCircleOutline className='text-2xl' />
+                                            <CgRemove className='text-2xl' />
+                                        </button>
+                                    )}
+                                    {redirectUri.length - 1 === index && redirectUri.length < 3 && (
+                                        <button onClick={redirectAdd} className="flex-shrink-0 bg-[#212529] hover:bg-[#424649] border-[#212529] hover:border-[#373b3e] text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                                        {/* Add More */}
+                                            <IoMdAddCircleOutline className='text-2xl' />
                                         </button>
                                     )}
                                 </div>
@@ -178,6 +192,12 @@ function SSO() {
                         </div>
                     </form>
                 </div>
+            </div>
+
+
+            <div className='flex-1 max-w-3xl'>
+                <img src={rightSideBanner.src} className='w-full' alt=''/>
+            </div>
             </div>
         </div>
     </>

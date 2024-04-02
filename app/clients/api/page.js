@@ -1,11 +1,13 @@
 'use client'
 import React, { useState } from 'react'
+import rightSideBanner from "@/public/myGovBanner.png"
 
 function API() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [keyName, setKeyName] = useState('')
     const handleKeyName = (e) => {
-        setKeyName(e.target.value.replaceAll(' ', '-'));
+        setKeyName(e.target.value.replaceAll(' ', ''));
+        
     }
   return (
     <>
@@ -13,8 +15,9 @@ function API() {
         <h4 className='text-[15px] font-semibold uppercase'>Clients</h4>
     </div>
         <div className='mx-8 my-4'>
+            <div className='flex justify-between items-center'>
             <div
-                className="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface shadow-lg shadow-gray-800/30 max-w-3xl">
+                className="flex-1 block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface shadow-lg shadow-gray-800/30 max-w-3xl">
                 <div
                     className="border-b-2 border-neutral-100 px-6 py-3 dark:border-white/10 font-bold text-[16px]">
                     API
@@ -89,6 +92,12 @@ function API() {
                         </div>
                     </form>
                 </div>
+            </div>
+
+            
+            <div className='flex-1 max-w-3xl'>
+                <img src={rightSideBanner.src} className='w-full' alt="" />
+            </div>
             </div>
         </div>
     </>
