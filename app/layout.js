@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import "./theme.min.css"
-import "./icons.min.css"
 import Sidebar from "./components/Sidebar";
 import { useState } from "react";
 import Link from "next/link";
@@ -16,10 +15,10 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
-  const [toggleValue, setToggleValue] = useState(false)
-  const handleToggleValue = (toggle) => {
-    setToggleValue(toggle)
-  }
+  // const [toggleValue, setToggleValue] = useState(false)
+  // const handleToggleValue = (toggle) => {
+  //   setToggleValue(toggle)
+  // }
   return (
     <html lang="en">
       <body className={inter.className}>

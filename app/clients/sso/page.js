@@ -1,8 +1,10 @@
 'use client'
 
 import React, { useState } from 'react'
+import { IoMdAddCircleOutline } from "react-icons/io";
+import { LuRefreshCcw } from "react-icons/lu";
 
-function page() {
+function SSO() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [redirectUri, setRedirectUri] = useState([{redirect_uri: ""}])
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -45,7 +47,7 @@ function page() {
                         <div className='w-full '>
                         {/* <div className="flex flex-wrap -mx-3 mb-6"> */}
                             <div className="w-full mt-4 px-3 mb-6 md:mb-0">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-first-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-first-name">
                                     Name
                                 </label>
                                 <input 
@@ -57,7 +59,7 @@ function page() {
                             </div>
 
                             <div className="w-full mt-4 px-3">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-last-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-last-name">
                                     Email
                                 </label>
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
@@ -70,7 +72,7 @@ function page() {
 
                         {/* <div className="flex flex-wrap -mx-3 mb-6"> */}
                             <div className="w-full mt-4 px-3 mb-6 md:mb-0">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-first-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-first-name">
                                     Client ID
                                 </label>
                                 
@@ -82,7 +84,7 @@ function page() {
                                 </div>
 
                                 <div className="w-full mt-4 px-3">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-last-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-last-name">
                                     Client Secret
                                 </label>
                                 <div className='flex'>
@@ -92,7 +94,8 @@ function page() {
                                     value={refreshText}
                                     placeholder="Client Secret" readOnly/>
                                     <button onClick={handleRefreshText} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                                    Refresh
+                                    {/* Refresh */}
+                                    <LuRefreshCcw className='text-2xl' />
                                     </button>
                                 </div>
                             </div>
@@ -100,7 +103,7 @@ function page() {
 
                         {/* <div className="flex flex-wrap -mx-3 mb-6"> */}
                             <div className="w-full mt-4 px-3 mb-6 md:mb-0">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-first-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-first-name">
                                 Post logout URI
                                 </label> 
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
@@ -111,7 +114,7 @@ function page() {
                             </div>
 
                             <div className="w-full mt-4 px-3">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-last-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-last-name">
                                     Policy URI
                                 </label>
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
@@ -124,7 +127,7 @@ function page() {
 
                         {/* <div className="flex flex-wrap -mx-3 mb-6"> */}
                             <div className="w-full mt-4 px-3 mb-6 md:mb-0">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-first-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-first-name">
                                 Initial Login URI
                                 </label> 
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
@@ -135,7 +138,7 @@ function page() {
                             </div>
 
                             <div className="w-full mt-4 px-3">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-last-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-last-name">
                                 Logo
                                 </label>
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded  px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
@@ -149,7 +152,7 @@ function page() {
                         {/* <div className="flex flex-wrap mt-4 mx-2 mb-6"> */}
                         {redirectUri.map((uri, index) => (
                             <div key={index} className="w-full mt-4 px-3 mb-6 md:mb-0">
-                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-first-name">
+                                <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-first-name">
                                     Redirect URI
                                 </label>
                                 <div className='flex'>
@@ -160,7 +163,8 @@ function page() {
                                     placeholder="Redirect URI"/>
                                     {redirectUri.length - 1 === index && redirectUri.length < 3 && (
                                         <button onClick={redirectAdd} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                                        Add More
+                                        {/* Add More */}
+                                        <IoMdAddCircleOutline className='text-2xl' />
                                         </button>
                                     )}
                                 </div>
@@ -180,4 +184,4 @@ function page() {
   )
 }
 
-export default page
+export default SSO

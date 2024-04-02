@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 
-function page() {
+function API() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [keyName, setKeyName] = useState('')
     const handleKeyName = (e) => {
@@ -95,4 +95,4 @@ function page() {
   )
 }
 
-export default page
+export default API
