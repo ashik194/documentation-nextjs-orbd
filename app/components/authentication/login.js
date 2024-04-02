@@ -1,4 +1,5 @@
 'use client'
+import ParticlesContent from '../Particles';
 import backgroundImage from '../../../public/bgimaget.jpg';
 
 export default function LoginForm() {
@@ -15,8 +16,11 @@ export default function LoginForm() {
             { /*<div className="min-w-full min-h-64 absolute bg-green-300 rounded-b-[50%] z-0">ghgjghjhkhkhk</div>*/}
 
             <div className='bg-[#F3F3F9] min-h-screen'>
-                <div class="absolute auth-one-bg-position auth-one-bg" id="auth-particles" style={bgImageStyles}>
-                    <div class="absolute bg-red-400 bg-gradient-to-r from-[#364574] to-[#405189] opacity-90 w-full h-full"></div>
+                <div class="absolute auth-one-bg-position auth-one-bg " id="auth-particles" style={bgImageStyles}>
+                    
+                    <div class="overflow-hidden absolute bg-red-400 bg-gradient-to-r from-[#364574] to-[#405189] opacity-90 w-full h-full">
+                    <ParticlesContent />
+                    </div>
                     <div class="absolute shape bottom-0 right-0 left-0 z-0 "> 
                         <svg fill='#F3F3F9' xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink"
                             viewBox="0 0 1440 120">
