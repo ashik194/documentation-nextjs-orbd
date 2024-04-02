@@ -5,23 +5,18 @@ import backgroundImage from '../../../public/bgimaget.jpg';
 export default function LoginForm() {
     const bgImageStyles = {
         backgroundImage: `url(${backgroundImage.src})`,
-        backgroundSize: 'cover',
-        height: '380px',
-        width: '100%',
-        top: "0",
-        left: "0"
     }
     return (
         <>
-            { /*<div className="min-w-full min-h-64 absolute bg-green-300 rounded-b-[50%] z-0">ghgjghjhkhkhk</div>*/}
+            <div className='bg-[#F3F3F9] min-h-screen z-20'>
 
-            <div className='bg-[#F3F3F9] min-h-screen'>
-                <div class="absolute auth-one-bg-position auth-one-bg " id="auth-particles" style={bgImageStyles}>
-                    
-                    <div class="overflow-hidden absolute bg-red-400 bg-gradient-to-r from-[#364574] to-[#405189] opacity-90 w-full h-full">
-                    <ParticlesContent />
+                <div className="absolute bg-cover h-[380px] w-full top-0 left-0 z-10" style={bgImageStyles}>
+
+                    <div className="absolute bg-gradient-to-r from-[#364574] to-[#405189] opacity-90 w-full h-[380px]">
+                        <ParticlesContent />
                     </div>
-                    <div class="absolute shape bottom-0 right-0 left-0 z-0 "> 
+
+                    <div className="absolute bottom-0 right-0 left-0 z-0">
                         <svg fill='#F3F3F9' xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink"
                             viewBox="0 0 1440 120">
                             <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
@@ -30,22 +25,23 @@ export default function LoginForm() {
 
                 </div>
 
-                <div className="relative z-10">
+                <div className='bg-[#F3F3F9] w-full  absolute top-[380px] right-0 left-0 z-20'></div>
 
-                    <div class="mt-24 mb-6">
-                        <div class="text-center mt-sm-5 mb-4 text-white-50">
+                <div className="relative z-30">
+
+                    <div className="mt-24 mb-6">
+                        <div className="text-center mt-sm-5 mb-4 text-white-50">
                             <div>
-                                <a href="index.html" class="d-inline-block auth-logo">
+                                <div className="d-inline-block auth-logo">
                                     <p className='text-2xl font-extrabold text-white'>SANDBOX</p>
-                                </a>
+                                </div>
                             </div>
-                            <p class="text-base font-medium text-[#ffffff80]">Lorem ipsum dolor sit amet</p>
+                            <p className="text-base font-medium text-[#ffffff80]">Lorem ipsum dolor sit amet</p>
                         </div>
                     </div>
 
-
-                    <div className="flex justify-center p-4">
-                        <div className="max-w-md rounded-md bg-white flex min-h-full flex-1 flex-col justify-center p-6 lg:p-8">
+                    <div className="flex justify-center p-4 mb-2">
+                        <div className="max-w-md rounded bg-white flex min-h-full flex-1 flex-col justify-center p-6 lg:p-8">
                             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
 
                                 <h5 className="text-center text-base font-medium leading-5 tracking-wide text-[#405189]">
@@ -116,16 +112,25 @@ export default function LoginForm() {
                                     </div>
                                 </form>
 
-                                <p className="mt-10 text-center text-sm text-gray-500">
-                                    Don't have an account ?{' '}
-                                    <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                                        Signup
-                                    </a>
-                                </p>
                             </div>
                         </div>
                     </div>
-                </div></div>
+
+
+                    <div>
+                        <p className="text-center text-xs font-normal text-black leading-4">
+                            Don't have an account ?{' '}
+                            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                                Signup
+                            </a>
+                        </p>
+                    </div>
+
+                    <div className='text-center py-5 text-xs font-normal text-[#878a99]'>© 2024 Sandbox. Developed by Orange Business Development Ltd.</div>
+
+                </div>
+
+            </div>
         </>
     )
 }
