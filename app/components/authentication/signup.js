@@ -1,19 +1,58 @@
+'use client'
+import ParticlesContent from '../Particles';
+import backgroundImage from '../../../public/bgimaget.jpg';
+
 export default function SignupForm() {
+    const bgImageStyles = {
+        backgroundImage: `url(${backgroundImage.src})`,
+    }
     return (
         <>
-            <div className="bg-[#F3F3F9] flex justify-center h-full p-4">
-                <div className="max-w-md rounded-md bg-white flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-                    <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className='bg-[#F3F3F9] min-h-screen z-20'>
 
-                        <h5 className="mt-10 text-center text-base font-medium leading-5 tracking-wide text-[#405189]">
-                        Create New Account
-                        </h5>
-                        <p className="text-center text-sm font-normal leading-9 tracking-normal text-[#878A99]">
-                        Sign up and continue to Sandbox.
-                        </p>
+                <div className="absolute bg-cover h-[380px] w-full top-0 left-0 z-10" style={bgImageStyles}>
+
+                    <div className="absolute bg-gradient-to-r from-[#364574] to-[#405189] opacity-90 w-full h-[380px]">
+                        <ParticlesContent />
                     </div>
 
-                    <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                    <div className="absolute bottom-0 right-0 left-0 z-0">
+                        <svg fill='#F3F3F9' xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 1440 120">
+                            <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
+                        </svg>
+                    </div>
+
+                </div>
+
+                <div className='bg-[#F3F3F9] w-full  absolute top-[380px] right-0 left-0 z-20'></div>
+
+                <div className="relative z-30">
+
+                    <div className="mt-24 mb-6">
+                        <div className="text-center mt-sm-5 mb-4 text-white-50">
+                            <div>
+                                <div className="d-inline-block auth-logo">
+                                    <p className='text-2xl font-extrabold text-white'>SANDBOX</p>
+                                </div>
+                            </div>
+                            <p className="text-base font-medium text-[#ffffff80]">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center p-4 mb-2">
+                        <div className="max-w-md rounded bg-white flex min-h-full flex-1 flex-col justify-center p-6 lg:p-8">
+                            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+
+                                <h5 className="text-center text-base font-medium leading-5 tracking-wide text-[#405189]">
+                                Create New Account
+                                </h5>
+                                <p className="text-center text-sm font-normal leading-9 tracking-normal text-[#878A99]">
+                                Sign up and continue to Sandbox.
+                                </p>
+                            </div>
+
+                            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                         <form className="space-y-6" action="#" method="POST">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium  text-gray-900">
@@ -84,14 +123,24 @@ export default function SignupForm() {
                             </div>
                         </form>
 
-                        <p className="mt-10 text-center text-sm text-gray-500">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <p className="text-center text-xs font-normal text-black leading-4">
                             Already have an account ?{' '}
                             <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                                Login
+                            Login
                             </a>
                         </p>
                     </div>
+
+                    <div className='text-center py-5 text-xs font-normal text-[#878a99]'>© 2024 Sandbox. Developed by Orange Business Development Ltd.</div>
+
                 </div>
+
             </div>
         </>
     )
