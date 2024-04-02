@@ -87,7 +87,7 @@ const ParticlesContent = () => {
                     },
                 },
                 detectRetina: true,
-            }} />
+            }} /> 
         );
  
 }
