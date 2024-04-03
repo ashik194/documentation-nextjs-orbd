@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Link from 'next/link'
 import { PiHouseBold } from 'react-icons/pi'
 import { FaListUl } from "react-icons/fa6";
+import myGovLogo from "@/public/mygov.png"
 
 export default function layout({children}) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -21,8 +22,8 @@ export default function layout({children}) {
         <div className={`${toggleValue?'min-w-[80px]':'w-[80px] sm:min-w-[260px]'} app-menu `}>
 
         <Link className='logo-box' href='/'>
-            <img src="assets/images/logo-light.png" className="logo-light h-6" alt="Light logo"/>
-            <img src="assets/images/logo-dark.png" className="logo-dark h-6" alt="Dark logo"/>
+            <img src={myGovLogo.src} className="logo-light h-8" alt="Light logo"/>
+            <img src={myGovLogo.src} className="logo-dark h-8" alt="Dark logo"/>
         </Link>
 
         {/* <!--- Menu --> */}
@@ -56,3 +57,6 @@ export default function layout({children}) {
     </>
   )
 }
+
+
+

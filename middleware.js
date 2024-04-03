@@ -9,7 +9,7 @@ export function middleware(request) {
 //   return NextResponse.rewrite(url)
     console.log("Testing")
     if(!sessionStatus){
-        return NextResponse.redirect(new URL("/auth/login",request.url))
+        return NextResponse.redirect(new URL("/login",request.url))
     }else{
 
         if ( sessionStatus && role === "clients" &&

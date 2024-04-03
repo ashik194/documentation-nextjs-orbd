@@ -1,8 +1,11 @@
 import React from 'react'
-import AdminDashboard from './adminDashabord'
+import AdminDashabordView from '../components/adminDashabordView'
+import ClientList from '../components/clientList'
 
 export default function Admin() {
   return (
-    <AdminDashboard />
+    <AdminDashabordView>
+      <ClientList />
+    </AdminDashabordView>
   )
 }

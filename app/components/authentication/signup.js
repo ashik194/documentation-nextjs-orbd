@@ -1,6 +1,7 @@
 'use client'
 import ParticlesContent from '../Particles';
 import backgroundImage from '../../../public/bgimaget.jpg';
+import Link from 'next/link';
 
 export default function SignupForm() {
     const bgImageStyles = {
@@ -131,9 +132,9 @@ export default function SignupForm() {
                     <div>
                         <p className="text-center text-xs font-normal text-black leading-4">
                             Already have an account ?{' '}
-                            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                            <Link href={'/login'} className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                             Login
-                            </a>
+                            </Link>
                         </p>
                     </div>
 
