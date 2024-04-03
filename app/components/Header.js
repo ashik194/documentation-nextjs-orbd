@@ -18,12 +18,12 @@ function Header(props) {
   return (
     <>
     
-<header className="flex items-center px-5 gap-4 border-b-2 h-16">
+<header className="flex justify-between items-center px-5 gap-4 border-b-2 h-16">
 
 {/* <Link className='logo-box' href='index.html'>
     <img src="assets/images/logo-sm.png" className="h-6" alt="Small logo" />
 </Link> */}
-
+<div>
 <button  onClick={menuToggle} className="hidden sm:block nav-link p-2 waves-effect me-auto">
     <span className="sr-only">Menu Toggle Button</span>
     <span className="flex items-center justify-center h-6 w-6">
@@ -31,7 +31,7 @@ function Header(props) {
         <HiMiniBars3BottomLeft className='text-2xl' />
     </span>
 </button>
-
+</div>
 {/* <div className="md:flex hidden items-center relative">
     <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <i className="ph ph-magnifying-glass text-base"></i>
