@@ -18,13 +18,13 @@ function Header(props) {
   return (
     <>
     
-<header className="app-header flex items-center px-5 gap-4 border-b-2 ">
+<header className="flex items-center px-5 gap-4 border-b-2 h-16">
 
 {/* <Link className='logo-box' href='index.html'>
     <img src="assets/images/logo-sm.png" className="h-6" alt="Small logo" />
 </Link> */}
 
-<button id="button-toggle-menu" onClick={menuToggle} className=" hidden sm:block nav-link p-2 waves-effect me-auto">
+<button  onClick={menuToggle} className="hidden sm:block nav-link p-2 waves-effect me-auto">
     <span className="sr-only">Menu Toggle Button</span>
     <span className="flex items-center justify-center h-6 w-6">
         {/* <i className="ph ph-list text-2xl"></i> */}
@@ -85,7 +85,7 @@ function Header(props) {
             <i className='ph ph-chevron-down'></i>
         </span>
     </button>
-    <div className={`fc-dropdown fc-dropdown-open:opacity-100 ${userDetails?'block':'hidden'} absolute  w-32 z-50 transition-[margin,opacity] duration-300 mt-2 bg-[#405189] shadow-lg border rounded-lg p-2`}>
+    <div className={`${userDetails?'block':'hidden'} absolute  w-32 z-50 transition-[margin,opacity] duration-300 mt-2 bg-[#405189] shadow-lg border rounded-lg p-2`}>
         {/* <a className="flex items-center py-2 px-3 rounded-md text-sm text-gray-100 hover:bg-gray-800" href="#">
             Inbox
         </a>
