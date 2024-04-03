@@ -2,7 +2,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
-import "./theme.min.css"
 import Sidebar from "./components/Sidebar";
 import { useState } from "react";
 import Link from "next/link";

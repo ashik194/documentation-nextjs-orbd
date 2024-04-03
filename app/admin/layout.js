@@ -14,32 +14,32 @@ export default function layout({children}) {
   }
   return (
     <>
-    <div id="app-wrapper" className="flex">
+    <div className="flex">
           
         {/* <Sidebar toggleValue={toggleValue} /> */}
+        
+        <div className={
+          `${toggleValue?'min-w-[80px]':'w-[80px] sm:min-w-[260px]'} 
+           sticky top-0 z-40 bg-[#405189] text-white` }>
 
-
-        <div className={`${toggleValue?'min-w-[80px]':'w-[80px] sm:min-w-[260px]'} app-menu `}>
-
-        <Link className='logo-box' href='/'>
-            <img src={myGovLogo.src} className="logo-light h-8" alt="Light logo"/>
-            <img src={myGovLogo.src} className="logo-dark h-8" alt="Dark logo"/>
+        <Link className='h-16 flex items-center justify-center z-50' href='/'>
+          <img src={myGovLogo.src} className={toggleValue?'h-4':'h-8'} alt="logo"/> 
         </Link>
 
         {/* <!--- Menu --> */}
-            <div data-simplebar>
-                <ul className="menu" data-fc-type="accordion">
-                    <li className="menu-title">Menu</li>
-                    <li className="menu-item">
-                        <Link className='menu-link waves-effect' href='/admin'>
-                            <span className="menu-icon"><PiHouseBold /></span>
-                            <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> Dashboard </span>
+            <div>
+                <ul>
+                    <li className="text-[#CFD3E1] px-5 py-3 text-xs font-medium">Menu</li> {/**?px-8 py-2 */}
+                    <li className="px-6 py-[10px]">
+                        <Link className='flex flex-wrap items-center gap-[10px]' href='/admin'>
+                            <span className="h-4 w-4"><PiHouseBold /></span>
+                            <span className={`${toggleValue?'hidden':'hidden sm:block'} text-base`}> Dashboard </span>
                         </Link>
                     </li>
-                    <li className="menu-item">
-                        <Link className='menu-link waves-effect' href='/admin'>
-                            <span className="menu-icon"><FaListUl /></span>
-                            <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> List </span>
+                    <li className="px-6 py-[10px]">
+                        <Link className='flex flex-wrap items-center gap-[10px]' href='/admin'>
+                            <span className="h-4 w-4"><FaListUl /></span>
+                            <span className={`${toggleValue?'hidden':'hidden sm:block'} text-base`}> List </span>
                         </Link>
                     </li>
 
@@ -47,10 +47,8 @@ export default function layout({children}) {
             </div>
         </div>
 
-
-          <div className="app-content">
+          <div className="flex flex-col">
             <Header handleToggleValue={handleToggleValue} />
-            
           {children}
           </div>
         </div>

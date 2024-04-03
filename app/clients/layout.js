@@ -7,63 +7,63 @@ import { FaPiedPiper } from "react-icons/fa";
 import { FaWpforms } from "react-icons/fa6";
 import myGovLogo from "@/public/mygov.png"
 
-function layout({children}) {
+function layout({ children }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [toggleValue, setToggleValue] = useState(false)
-  const handleToggleValue = (toggle) => {
-    setToggleValue(toggle)
-  }
-  return (
-    <>
-    <div id="app-wrapper" className="flex">
-          
-        {/* <Sidebar toggleValue={toggleValue} /> */}
+    const handleToggleValue = (toggle) => {
+        setToggleValue(toggle)
+    }
+    return (
+        <>
+            <div className="flex">
+
+                {/* <Sidebar toggleValue={toggleValue} /> */}
+
+                <div className={
+                    `${toggleValue ? 'min-w-[80px]' : 'w-[80px] sm:min-w-[260px]'} 
+                        sticky top-0 z-40 bg-[#405189] text-white` }>
+
+                    <Link className='h-16 flex items-center justify-center z-50' href='/'>
+                        <img src={myGovLogo.src} className={toggleValue ? 'h-4' : 'h-8'} alt="logo" />
+                    </Link>
+
+                    {/* <!--- Menu --> */}
+                    <div>
+                        <ul>
+                            <li className="text-[#CFD3E1] px-5 py-3 text-xs font-medium">Menu</li>
+
+                            <li className="px-6 py-[10px]">
+                                <Link className='flex flex-wrap items-center gap-[10px]' href='/clients'>
+                                    <span className="h-4 w-4"><PiHouseBold /></span>
+                                    <span className={`${toggleValue ? 'hidden' : 'hidden sm:block'} text-base`}> Dashboard </span>
+                                </Link>
+                            </li>
+                            <li className="px-6 py-[10px]">
+                                <Link className='flex flex-wrap items-center gap-[10px]' href='/clients/sso'>
+                                    <span className="h-4 w-4"><FaWpforms /></span>
+                                    <span className={`${toggleValue ? 'hidden' : 'hidden sm:block'} text-base`}> SSO </span>
+                                </Link>
+                            </li>
+                            <li className="px-6 py-[10px]">
+                                <Link className='flex flex-wrap items-center gap-[10px]' href='/clients/api'>
+                                    <span className="h-4 w-4"><FaPiedPiper /></span>
+                                    <span className={`${toggleValue ? 'hidden' : 'hidden sm:block'} text-base`}> API </span>
+                                </Link>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
 
 
-        <div className={`${toggleValue?'min-w-[80px]':'w-[80px] sm:min-w-[260px]'} app-menu `}>
+                <div className="flex flex-col w-screen">
+                    <Header handleToggleValue={handleToggleValue} />
 
-        <Link className='logo-box' href='/'>
-            <img src={myGovLogo.src} className="logo-light h-8" alt="Light logo"/>
-            <img src={myGovLogo.src} className="logo-dark h-8" alt="Dark logo"/>
-        </Link>
-
-        {/* <!--- Menu --> */}
-            <div data-simplebar>
-                <ul className="menu" data-fc-type="accordion">
-                    <li className="menu-title">Menu</li>
-
-                    <li className="menu-item">
-                        <Link className='menu-link waves-effect' href='/clients'>
-                            <span className="menu-icon"><PiHouseBold /></span>
-                            <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> Dashboard </span>
-                        </Link>
-                    </li>
-                    <li className="menu-item">
-                        <Link className='menu-link waves-effect' href='/clients/sso'>
-                            <span className="menu-icon"><FaWpforms /></span>
-                            <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> SSO </span>
-                        </Link>
-                    </li>
-                    <li className="menu-item">
-                        <Link className='menu-link waves-effect' href='/clients/api'>
-                            <span className="menu-icon"><FaPiedPiper /></span>
-                            <span className={`${toggleValue?'hidden':'hidden sm:block'} `}> API </span>
-                        </Link>
-                    </li>
-
-                </ul>
+                    {children}
+                </div>
             </div>
-        </div>
-
-
-          <div className="app-content">
-            <Header handleToggleValue={handleToggleValue} />
-            
-          {children}
-          </div>
-        </div>
-    </>
-  )
+        </>
+    )
 }
 
 export default layout
