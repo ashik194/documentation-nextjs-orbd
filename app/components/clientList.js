@@ -4,13 +4,12 @@ import Switch from './switch'
 import porsonImage from '../../public/person1.jpg'
 
 export default function ClientList() {
-console.log(porsonImage)
+//style={{boxShadow: "0 1px 2px rgba(56, 65, 74, 0.15)"}}
     return (
 
         <>
             <div 
-            className="flex flex-col justify-start bg-white rounded w-auto" 
-            style={{boxShadow: "0 1px 2px rgba(56, 65, 74, 0.15)"}}>
+            className="flex flex-col justify-start bg-white rounded w-auto shadow-lg shadow-gray-800/30">
 
                 <div className="flex flex-row items-center border-[#e9ebec] border-b p-4">
                     <h4 className="text-base font-medium text-[#495057]">Client List</h4>
