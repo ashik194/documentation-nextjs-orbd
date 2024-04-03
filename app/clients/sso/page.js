@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { LuRefreshCcw } from "react-icons/lu";
-import rightSideBanner from "@/public/myGovBanner.png"
+import rightSideBanner from "@/public/mygov.png"
 import { CgRemove } from "react-icons/cg";
 
 function SSO() {
@@ -195,8 +195,8 @@ function SSO() {
             </div>
 
 
-            <div className='flex-1 max-w-3xl'>
-                <img src={rightSideBanner.src} className='w-full' alt=''/>
+            <div className='flex-1 flex items-center justify-center'>
+                <img src={rightSideBanner.src} className='max-w-2xl' alt=''/>
             </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
+import man from "@/public/man.jpg"
 
 function Header(props) {
     const [toggle, setToggle] = useState(false)
@@ -78,7 +79,7 @@ function Header(props) {
 
 <div className="relative">
     <button data-fc-type="dropdown" data-fc-placement="bottom-end" onClick={userInfo} type="button" className="nav-link flex items-center gap-2.5 waves-effect p-2">
-        <img src="assets/images/users/avatar-6.jpg" alt="user-image" className="rounded-full h-8 w-8"/>
+        <img src={man.src} alt="user-image" className="rounded-full h-8 w-8"/>
         <span className="md:flex items-center hidden">
             <span className="font-medium text-base">Jamie D.</span>
             <i className='ph ph-chevron-down'></i>
