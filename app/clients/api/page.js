@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import rightSideBanner from "@/public/myGovBanner.png"
-
+import rightSideBanner from "@/public/mygov.png"
 
 function API() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -96,9 +95,10 @@ function API() {
                 </div>
             </div>
 
-            <div className='flex-1 flex items-center justify-center'>
-                <img src={rightSideBanner.src} className='max-w-2xl' alt="" /> 
+            <div className='flex-1 md:flex items-center justify-center hidden'>
+                <img src={rightSideBanner.src} className='max-w-2xl' alt=''/>
             </div>
+
             </div>
         </div>
     </>

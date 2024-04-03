@@ -42,7 +42,7 @@ function SSO() {
     <div className='px-4 py-2 shadow-md bg-white'>
         <h4 className='text-[15px] font-bold uppercase '>Clients</h4>
     </div>
-        <div className='mx-10 my-4'>
+        <div className='mx-8 my-4'>
             <div className='flex justify-between items-center'>
             <div
                 className="flex-1 block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface shadow-lg shadow-gray-800/30 max-w-3xl">
@@ -195,7 +195,7 @@ function SSO() {
             </div>
 
 
-            <div className='flex-1 flex items-center justify-center'>
+            <div className='flex-1 md:flex items-center justify-center hidden'>
                 <img src={rightSideBanner.src} className='max-w-2xl' alt=''/>
             </div>
             </div>
