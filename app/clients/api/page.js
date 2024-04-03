@@ -2,11 +2,13 @@
 import React, { useState } from 'react'
 import rightSideBanner from "@/public/myGovBanner.png"
 
+
 function API() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [keyName, setKeyName] = useState('')
     const handleKeyName = (e) => {
         setKeyName(e.target.value.replaceAll(' ', ''));
+
         
     }
   return (
@@ -94,9 +96,8 @@ function API() {
                 </div>
             </div>
 
-            
-            <div className='flex-1 max-w-3xl'>
-                <img src={rightSideBanner.src} className='w-full' alt="" />
+            <div className='flex-1 flex items-center justify-center'>
+                <img src={rightSideBanner.src} className='max-w-2xl' alt="" /> 
             </div>
             </div>
         </div>
