@@ -9,13 +9,13 @@ export default function ClientList() {
 
         <>
             <div 
-            className="flex flex-col justify-start bg-white rounded w-auto shadow-lg shadow-gray-800/30">
+            className="flex flex-col justify-center bg-white rounded w-auto shadow-lg shadow-gray-800/30">
 
                 <div className="flex flex-row items-center border-[#e9ebec] border-b p-4">
                     <h4 className="text-base font-medium text-[#495057]">Client List</h4>
                 </div>
 
-                <div className="p-4 overflow-x-auto">
+                <div className="max-w-[80vw] sm:max-w-[85vw] md:max-w[90vw] lg:max-w-[100vw] xl:max-w-screen 2xl:max-w-screen p-4 overflow-x-auto">
                      
                     <table className="table-auto">
 
