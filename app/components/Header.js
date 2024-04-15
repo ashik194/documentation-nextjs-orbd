@@ -18,7 +18,7 @@ function Header(props) {
   return (
     <>
     
-<header className="flex justify-between items-center px-5 gap-4 border-b-2 h-16 sticky top-0 right-0 left-0 bg-white">
+<header className="flex justify-between items-center px-5 gap-4 border-b-2 h-16 sticky top-0 right-0   bg-white">
 
 {/* <Link className='logo-box' href='index.html'>
     <img src="assets/images/logo-sm.png" className="h-6" alt="Small logo" />
