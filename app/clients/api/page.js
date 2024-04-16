@@ -36,8 +36,7 @@ function API() {
                                     className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" 
                                     type="text" 
                                     placeholder="Enter your Name"
-                                    name="name"
-                                    value=""
+                                    name="name" 
                                 />
                             </div>
 
@@ -51,7 +50,6 @@ function API() {
                                     type="email" 
                                     placeholder="Enter your email"
                                     name='email'
-                                    value=""
                                 />
                             </div>
                         {/* </div> */}
@@ -81,7 +79,6 @@ function API() {
                                     type="text" 
                                     placeholder="Project URI"
                                     name="project_uri"
-                                    value=""
                                 />
                             </div>
                         {/* </div>  */}
