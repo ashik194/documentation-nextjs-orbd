@@ -7,48 +7,48 @@ import Chart from 'react-apexcharts'
 
 
 function Client() {
-  const [chartOptions, setChartOptions] = useState(
-    {
-      options: {
-            chart: {
-              id: 'apexchart-example'
-            },
-            xaxis: {
-              categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-            }
-          },
-          series1: [
-            {
-              name: 'series-1',
-              data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
-            }
-        ],
-        series2: [
-          {
-            name: 'series-1',
-            data: [90, 80, 90, 110, 100, 160, 170, 91, 125]
-          },
-          {
-            name: 'series-2',
-            data: [50, 80, 35, 50, 100, 60, 70, 91, 125]
-          },
-          {
-            name: 'series-3',
-            data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
-          }
-        ],
-        series3: [
-          {
-            name: 'series-1',
-            data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
-          },
-          {
-            name: 'series-2',
-            data: [30, 45, 40, 55, 60, 70, 90, 110, 145]
-          }
-        ]
-    }
-  )
+  // const [chartOptions, setChartOptions] = useState(
+  //   {
+  //     options: {
+  //           chart: {
+  //             id: 'apexchart-example'
+  //           },
+  //           xaxis: {
+  //             categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+  //           }
+  //         },
+  //         series1: [
+  //           {
+  //             name: 'series-1',
+  //             data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+  //           }
+  //       ],
+  //       series2: [
+  //         {
+  //           name: 'series-1',
+  //           data: [90, 80, 90, 110, 100, 160, 170, 91, 125]
+  //         },
+  //         {
+  //           name: 'series-2',
+  //           data: [50, 80, 35, 50, 100, 60, 70, 91, 125]
+  //         },
+  //         {
+  //           name: 'series-3',
+  //           data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+  //         }
+  //       ],
+  //       series3: [
+  //         {
+  //           name: 'series-1',
+  //           data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+  //         },
+  //         {
+  //           name: 'series-2',
+  //           data: [30, 45, 40, 55, 60, 70, 90, 110, 145]
+  //         }
+  //       ]
+  //   }
+  // )
   return (
     <>
         <div className='px-6 py-2 mt-2 border border-t-0 border-b-[#e9ebec] bg-white'>
@@ -113,7 +113,7 @@ function Client() {
       </div>
 
       <div className='mt-6 px-6'>
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
+      {/* <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
           <div
               className="col-span-1 border border-gray-300 block rounded-md bg-white shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface ">
               <div
@@ -144,7 +144,7 @@ function Client() {
                 <Chart options={chartOptions.options} series={chartOptions.series3} type="area" height={320} className="w-full" />
               </div>
           </div>
-      </div>
+      </div> */}
       </div>
       <div className='px-6 mt-6 grid grid-cols-5 gap-6'>
           <div

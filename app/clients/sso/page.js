@@ -5,8 +5,11 @@ import { IoMdAddCircleOutline } from "react-icons/io";
 import { LuRefreshCcw } from "react-icons/lu";
 import rightSideBanner from "@/public/mygov.png"
 import { CgRemove } from "react-icons/cg";
+import LogoUp from '@/app/components/Logo';
+import Image from 'next/image';
 
 function SSO() {
+    const [url,setUrl]=useState('')
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [redirectUri, setRedirectUri] = useState([{redirect_uri: ""}])
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -62,7 +65,7 @@ function SSO() {
                                 className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
                                 type="text"
                                 name=""
-                                value=""
+                                
                                 placeholder="Enter your Name"/>
                             </div>
 
@@ -73,7 +76,7 @@ function SSO() {
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
                                 type="email"
                                 name=""
-                                value=""
+                                
                                 placeholder="Enter your email"/>
                             </div>
                         {/* </div> */}
@@ -87,7 +90,7 @@ function SSO() {
                                 <input className="appearance-none block w-full  text-gray-700 border bg-gray-100 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-gray-100 focus:border-gray-500" 
                                 type="text"
                                 name=""
-                                value=""
+                                
                                 placeholder="Client ID" readOnly/>
                                 </div>
 
@@ -117,7 +120,7 @@ function SSO() {
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
                                 type="text"
                                 name=""
-                                value=""
+                                
                                 placeholder="Enter Post logout URI"/>
                             </div>
 
@@ -128,7 +131,7 @@ function SSO() {
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
                                 type="text"
                                 name=""
-                                value=""
+                                
                                 placeholder="Enter Policy URI"/>
                             </div>
                         {/* </div> */}
@@ -141,20 +144,20 @@ function SSO() {
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
                                 type="text"
                                 name=""
-                                value=""
+                                
                                 placeholder="Enter Initial Login URI"/>
                             </div>
 
-                            <div className="w-full mt-4 px-3">
+                            {/* <div className="w-full mt-4 px-3">
                                 <label className="block  tracking-wide text-gray-700 text-xs font-semibold mb-2" htmlFor="grid-last-name">
                                 Logo
                                 </label>
                                 <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded  px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
                                 type="file"
                                 name=""
-                                value=""
+                                
                                 placeholder="Logo"/>
-                            </div>
+                            </div> */}
                         {/* </div> */}
 
                         {/* <div className="flex flex-wrap mt-4 mx-2 mb-6"> */}
@@ -167,7 +170,7 @@ function SSO() {
                                     <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
                                     type="text"
                                     name=""
-                                    value=""
+                                    
                                     placeholder="Redirect URI"/>
                                     {redirectUri.length - 1 !== index && redirectUri.length > 0 && (
                                         <button onClick={redirectRemove} className="flex-shrink-0 bg-[#f06548] hover:bg-[#cc563d] border-[#f06548] hover:border-[#cc563d] text-sm border-4 text-white py-1 px-2 rounded" type="button">
@@ -186,6 +189,8 @@ function SSO() {
                         ))}
                         {/* </div> */}
 
+                         <LogoUp />
+
                         </div>
                         <div className='mx-4 mt-4'>
                             <button className='text-white bg-[#405189] border border-[#405189] hover:text-white hover:bg-[#364574] hover:border-[#33416e] px-4 py-2 rounded-md'>Submit</button>
@@ -193,10 +198,11 @@ function SSO() {
                     </form>
                 </div>
             </div>
+            
 
 
             <div className='flex-1 md:flex items-center justify-center hidden'>
-                <img src={rightSideBanner.src} className='max-w-2xl' alt=''/>
+                <Image src={rightSideBanner} className='max-w-2xl' alt='' />
             </div>
             </div>
         </div>
