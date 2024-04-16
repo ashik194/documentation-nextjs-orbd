@@ -21,7 +21,7 @@ function layout({ children }) {
 
                 <div className={
                     `${toggleValue ? 'min-w-[80px]' : 'w-[80px] sm:min-w-[260px]'} 
-                        sticky top-0 z-40 bg-[#405189] text-white` }>
+                        sticky top-0 z-40 bg-[#405189] text-white min-h-screen` }>
 
                     <Link className='h-16 flex items-center justify-center z-50' href='/'>
                         <img src={myGovLogo.src} className={toggleValue ? 'h-4' : 'h-8'} alt="logo" />
