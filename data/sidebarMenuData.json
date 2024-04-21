@@ -1,0 +1,5 @@
+{
+    "dashboard":["Analytics", "Ecommerce","Crypto","Projects", "NFT", "Job"],
+    "app":["Calendar","Chat","Email","Ecommerce","Projects"],
+    "layout":["Horizontal","Detached","Two Column","Hovered"]
+}
